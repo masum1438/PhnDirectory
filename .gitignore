@@ -1,0 +1,52 @@
+# ---- ASP.NET Core / Visual Studio ----
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vs/
+[Bb]uild/
+[Rr]elease/
+x64/
+x86/
+*.log
+*.lock.json
+
+# NuGet packages
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+project.lock.json
+
+# Publish outputs
+publish/
+out/
+artifacts/
+
+# ---- Angular / Node.js ----
+node_modules/
+npm-debug.log
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+package-lock.json
+yarn.lock
+
+# Angular build
+dist/
+tmp/
+temp/
+
+# ---- IDE / OS files ----
+# Visual Studio Code
+.vscode/
+.history/
+
+# Rider / JetBrains
+.idea/
+
+# Mac / Linux / Windows system files
+.DS_Store
+Thumbs.db
