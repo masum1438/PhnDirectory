@@ -23,13 +23,11 @@ export class ContactForm {
   private toastr = inject(ToastrService);
 
   constructor(private contactService: ContactService) {}
-  // ngOnInit(): void {
-  //   throw new Error('Method not implemented.');
-  // }
+  
 
   onSubmit() {
     this.contactService.createContact(this.contact).subscribe(() => {
-      this.toastr.success('✅ Contact created successfully.');
+      this.toastr.success(' Contact created successfully.');
       this.contact = { name: '', email: '', phoneNumber: '', address: '', group: '', balance: 0 };
     });
   }
