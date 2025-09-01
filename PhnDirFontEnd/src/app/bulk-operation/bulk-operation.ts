@@ -16,7 +16,7 @@ export class BulkOperation {
   message: string = '';
   private toastr = inject(ToastrService);
 
-  // For Bulk Insert JSON
+
   bulkInsertJson: string = `[
     {
       "name": "John Doe",
@@ -36,7 +36,7 @@ export class BulkOperation {
     }
   ]`;
 
-  // For AutoDelete
+ 
   contactsToDelete: number = 10;
   deleteIntervalMinutes: number = 5;
   deleteOnlyInactive: boolean = true;
@@ -49,26 +49,26 @@ export class BulkOperation {
     try {
       const contacts = JSON.parse(this.bulkInsertJson);
       this.contactService.bulkInsert(contacts).subscribe({
-        next: () => this.toastr.success('✅ Bulk insert successful'),
-        error: () => this.toastr.error('❌ Failed bulk insert')
+        next: () => this.toastr.success(' Bulk insert successful'),
+        error: () => this.toastr.error(' Failed bulk insert')
       });
     } catch (e) {
-      this.toastr.warning('⚠️ Invalid JSON format!');
+      this.toastr.warning(' Invalid JSON format!');
     }
     
   }
 
   bulkDelete() {
     this.contactService.bulkDelete([this.startId, this.endId]).subscribe({
-      next: () => this.toastr.success(`✅ Deleted contacts from ${this.startId} to ${this.endId}`),
-      error: () => this.toastr.error('❌ Failed bulk delete') 
+      next: () => this.toastr.success(`Deleted contacts from ${this.startId} to ${this.endId}`),
+      error: () => this.toastr.error(' Failed bulk delete') 
     });
   }
 
   bulkDisable() {
     this.contactService.bulkDisable([this.startId, this.endId]).subscribe({
-      next: () =>this.toastr.success(`✅ Disabled contacts from ${this.startId} to ${this.endId}`),
-      error: () => this.toastr.error('❌ Failed bulk disable')
+      next: () =>this.toastr.success(`Disabled contacts from ${this.startId} to ${this.endId}`),
+      error: () => this.toastr.error(' Failed bulk disable')
     });
   }
 
@@ -85,7 +85,6 @@ export class BulkOperation {
     });
   }
 
-  // 🔹 Toggle Auto Delete ON/OFF
   toggleAutoDelete() {
     this.contactService.toggleAutoDelete(this.isAutoDeleteEnabled).subscribe({
       next: res => this.toastr.success(`Auto Delete ${this.isAutoDeleteEnabled ? 'enabled' : 'disabled'} successfully!`),
