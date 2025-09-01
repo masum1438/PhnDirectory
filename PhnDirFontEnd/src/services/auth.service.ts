@@ -27,7 +27,7 @@ export class AuthService {
     }
   }
 
-  // ✅ Register
+
   register(data: RegisterRequest): Observable<AuthResponse> {
     return this.http.post<AuthResponse>(`${this.apiUrl}/register`, data).pipe(
       map((res) => {
@@ -38,7 +38,7 @@ export class AuthService {
     )
   }
 
-  // ✅ Login
+ 
   login(data: LoginRequest): Observable<AuthResponse> {
     return this.http.post<AuthResponse>(`${this.apiUrl}/login`, data).pipe(
       map((res) => {
