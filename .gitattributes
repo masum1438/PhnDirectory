@@ -1,0 +1,56 @@
+# ========================
+# Line endings
+# ========================
+# Automatically normalize line endings
+* text=auto
+
+# Force specific line endings
+*.sh text eol=lf
+*.bash text eol=lf
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+
+# ========================
+# Source code
+# ========================
+*.cs    text diff=csharp
+*.csproj text merge=union
+*.sln   text eol=crlf
+*.ts    text diff=javascript
+*.js    text diff=javascript
+*.jsx   text diff=javascript
+*.tsx   text diff=javascript
+*.json  text
+*.html  text
+*.css   text
+*.scss  text
+*.md    text
+*.yml   text
+*.yaml  text
+
+# ========================
+# Binary files
+# ========================
+*.dll   binary
+*.exe   binary
+*.pdb   binary
+*.so    binary
+*.dylib binary
+*.lib   binary
+*.obj   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.pdf   binary
+*.zip   binary
+*.tar   binary
+*.gz    binary
+
+# ========================
+# Git merge / diff helpers
+# ========================
+*.lock merge=union
+package-lock.json merge=union
+yarn.lock merge=union

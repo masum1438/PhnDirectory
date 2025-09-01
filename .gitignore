@@ -1,0 +1,73 @@
+# ========================
+# Visual Studio / .NET
+# ========================
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+[Ll]ogs/
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+*.nuget.props
+*.nuget.targets
+
+# VS Code settings
+.vscode/
+.history/
+
+# Rider / JetBrains
+.idea/
+*.iml
+
+# ASP.NET Core logs
+*.dbmdl
+*.dbproj.schemaview
+*.jfm
+*.pdb
+*.mdb
+*.cache
+*.bak
+*.bak2
+*.swp
+*.swo
+
+# ========================
+# Angular / Node.js
+# ========================
+node_modules/
+dist/
+tmp/
+out-tsc/
+.angular/
+.angular/cache/
+coverage/
+
+# Environment files (keep only sample)
+.env
+.env.local
+.env.*.local
+!env.example
+
+# ========================
+# OS / General
+# ========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ========================
+# Git
+# ========================
+*.orig
+*.rej
+*.diff
+*.patch
+*.lock
