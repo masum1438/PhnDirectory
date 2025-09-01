@@ -1,0 +1,28 @@
+<div class="container mt-4">
+  <h3>Assign Role to User</h3>
+
+  <form [formGroup]="roleForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label>Email</label>
+      <input type="email" formControlName="email" class="form-control" placeholder="Enter user email">
+      <div *ngIf="roleForm.get('email')?.invalid && roleForm.get('email')?.touched" class="text-danger">
+        Valid email is required
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label>Role</label>
+      <select formControlName="role" class="form-select">
+        <option value="" disabled>Select Role</option>
+        <option value="Admin">Admin</option>
+        <option value="Manager">Manager</option>
+        <option value="User">User</option>
+      </select>
+      <div *ngIf="roleForm.get('role')?.invalid && roleForm.get('role')?.touched" class="text-danger">
+        Role is required
+      </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit" [disabled]="roleForm.invalid">Assign Role</button>
+  </form>
+</div>

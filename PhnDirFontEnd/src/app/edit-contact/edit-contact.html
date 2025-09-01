@@ -1,0 +1,38 @@
+<div class="container mt-5 mb-3">
+  <h2 class="fw-bold text-primary mb-4">✏️ Edit Contact</h2>
+
+  <form (ngSubmit)="updateContact()">
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input class="form-control" [(ngModel)]="contact.name" name="name" required />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input class="form-control" [(ngModel)]="contact.email" name="email" type="email" />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Phone</label>
+      <input class="form-control" [(ngModel)]="contact.phoneNumber" name="phoneNumber" required />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Balance</label>
+      <input class="form-control" [(ngModel)]="contact.balance" name="balance" type="number" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Group</label>
+      <input class="form-control" [(ngModel)]="contact.group" name="group" />
+    </div>
+    
+
+    <div class="mb-3">
+      <label class="form-label">Address</label>
+      <textarea class="form-control" [(ngModel)]="contact.address" name="address"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success me-2">💾 Save</button>
+    <a class="btn btn-secondary" routerLink="/contact-list">⬅️ Cancel</a>
+  </form>
+</div>

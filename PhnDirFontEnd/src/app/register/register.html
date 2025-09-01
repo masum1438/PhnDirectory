@@ -1,0 +1,28 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+          <h4 class="mb-0">Register</h4>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" class="form-control" formControlName="email" placeholder="Enter email">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" id="password" class="form-control" formControlName="password" placeholder="Enter password">
+            </div>
+            <div class="mb-3">
+              <label for="confirmPassword" class="form-label">Confirm Password</label>
+              <input type="password" id="confirmPassword" class="form-control" formControlName="confirmPassword" placeholder="Confirm password">
+            </div>
+            <button class="btn btn-primary w-100" type="submit" [disabled]="form.invalid">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

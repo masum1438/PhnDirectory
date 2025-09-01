@@ -1,0 +1,39 @@
+<div class="container mt-5" *ngIf="contact">
+  <div class="card shadow-lg border-0 rounded-3">
+    <div class="card-header bg-primary text-white">
+      <h4>📄 Contact Details</h4>
+    </div>
+    <div class="card-body">
+      <p><strong>ID:</strong> {{ contact.id }}</p>
+      <p><strong>Name:</strong> {{ contact.name }}</p>
+      <p><strong>Email:</strong> {{ contact.email }}</p>
+      <p><strong>Phone:</strong> {{ contact.phoneNumber }}</p>
+      <p><strong>Balance:</strong> ${{ contact.balance | number: '1.2-2' }}</p>
+      <p><strong>Group:</strong> {{ contact.group }}</p>
+      <p><strong>Address:</strong> {{ contact.address }}</p>
+
+      <!-- Format the date nicely -->
+      <p>
+        <strong>Created At:</strong>
+        {{ contact.createdAt | date:'fullDate' }} 
+        <span class="text-muted">({{ contact.createdAt | date:'shortTime' }})</span>
+      </p>
+
+      <p>
+        <strong>Status:</strong>
+        <span class="badge m-2"
+              [ngClass]="contact.status ? 'bg-success' : 'bg-danger'">
+          {{ contact.status ? "Active" : "Inactive" }}
+        </span>
+      </p>
+    </div>
+
+    <div class="card-footer text-end">
+      <a routerLink="/contact-list" class="btn btn-secondary">⬅️ Back</a>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!contact" class="text-center mt-5">
+  <p class="text-muted">Loading contact details...</p>
+</div>
