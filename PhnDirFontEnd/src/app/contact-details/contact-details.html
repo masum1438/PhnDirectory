@@ -12,7 +12,6 @@
       <p><strong>Group:</strong> {{ contact.group }}</p>
       <p><strong>Address:</strong> {{ contact.address }}</p>
 
-      <!-- Format the date nicely -->
       <p>
         <strong>Created At:</strong>
         {{ contact.createdAt | date:'fullDate' }} 
@@ -29,7 +28,7 @@
     </div>
 
     <div class="card-footer text-end">
-      <a routerLink="/contact-list" class="btn btn-secondary">⬅️ Back</a>
+      <a routerLink="/contact-list" class="btn btn-secondary"> Back</a>
     </div>
   </div>
 </div>
